@@ -2,3 +2,4 @@
 25.1.2017 - Samsetning byrjuð, í smá basli með byrjuninna vegna hugmyndleisis gagnvert í hvað bottin getur verið notaður í.
 27.1.2017 - Samsetning heldur áfram, lenti í smá veseni með að koma mótor á klónna en það tókst að lokum, setti líka inn hardware listan.
 1.2.2017 - Gerði gant ritið sem sýnir tímanotkun okkar.
+8.2.2017 - Vegna þess að batteríið var of langt frá CPU inntakinu þurfti ég að taka efri part róbótans í sundur og nánast snúa öllu við.
