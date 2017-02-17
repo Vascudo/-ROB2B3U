@@ -19,9 +19,10 @@ typedef struct
 	int minNum;
 }toVal;
 
+toVal twoVal;
+
 void getMin(tArray x)
 {
-	toVal twoVal;
 	for(int i = 0; i < sizeof(x); i++)
 	{
 		if(twoVal.min > x[i])
@@ -56,13 +57,18 @@ task main()
 
 getMin(surround1);
 
-int min1 = twoVal.min, minNum1 = twoVal.minNum;
+int min1 = twoVal.min;
+int minNum1 = twoVal.minNum;
 
 getMin(surround2);
 
-int min2 = twoVal.min, minNum2 = twoVal.minNum;
+int min2 = twoVal.min;
+int minNum2 = twoVal.minNum;
+
+bool one = NULL;
 
 if(min1 < min2){
+			one = true;
 			motor[leftMotor] = rotSpeed;
 			motor[rightMotor] = -rotSpeed;
 			motor[aftMotor] = rotSpeed;
@@ -70,11 +76,21 @@ if(min1 < min2){
 
 }
 else if(min2 < min1){
+			one = false;
 			motor[leftMotor] = rotSpeed;
 			motor[rightMotor] = -rotSpeed;
 			motor[aftMotor] = rotSpeed;
 			wait1Msec(minNum2*tIntvl);
 
 }
+
+motor[leftMotor] = forwdSpeed;
+motor[rightMotor] = forwdSpeed;
+if(one)
+	wait1Msec(min1);
+
+else
+	wait1Msec(min2);
+
 
 }
