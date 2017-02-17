@@ -13,7 +13,24 @@ int tIntvl = 30;
 tArray surround1;
 tArray surround2;
 
-struct twoVal;
+typedef struct
+{
+	int min;
+	int minNum;
+}toVal;
+
+void getMin(tArray x)
+{
+	toVal twoVal;
+	for(int i = 0; i < sizeof(x); i++)
+	{
+		if(twoVal.min > x[i])
+		{
+			twoVal.min = x[i];
+			twoVal.minNum = i;
+		}
+	}
+}
 
 task main()
 {
@@ -26,29 +43,38 @@ task main()
 				surround1[i] = SensorValue[leftSonar];
 				surround2[i] = SensorValue[rightSonar];
 
-				motor[leftMotor] = rotSpeed;
-				motor[rightMotor] = -rotSpeed;
-				motor[aftMotor] = rotSpeed;
 
+				i++;
 				ClearTimer(T1);
 			}
 
-	}while(surround1[99] != 0)
+			motor[leftMotor] = rotSpeed;
+			motor[rightMotor] = -rotSpeed;
+			motor[aftMotor] = rotSpeed;
 
+	}while(surround1[99] != 0);
 
+getMin(surround1);
+
+int min1 = twoVal.min, minNum1 = twoVal.minNum;
+
+getMin(surround2);
+
+int min2 = twoVal.min, minNum2 = twoVal.minNum;
+
+if(min1 < min2){
+			motor[leftMotor] = rotSpeed;
+			motor[rightMotor] = -rotSpeed;
+			motor[aftMotor] = rotSpeed;
+			wait1Msec(minNum1*tIntvl);
+
+}
+else if(min2 < min1){
+			motor[leftMotor] = rotSpeed;
+			motor[rightMotor] = -rotSpeed;
+			motor[aftMotor] = rotSpeed;
+			wait1Msec(minNum2*tIntvl);
 
 }
 
-int getMin[1](tArray x)
-{
-	int  min = 0, minNum = 0;
-	for(int i = 0; i < sizeof(x); i++)
-	{
-		if(min > x[i])
-		{
-			min = x[i];
-			minNum = i;
-		}
-	}
-	return min;
 }
