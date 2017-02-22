@@ -4,3 +4,4 @@
 1.2.2017 - Gerði gant ritið sem sýnir tímanotkun okkar.
 8.2.2017 - Vegna þess að batteríið var of langt frá CPU inntakinu þurfti ég að taka efri part róbótans í sundur og nánast snúa öllu við.
 15.2.2017 - Fínpússaði gant ritið þar sem það var einum of einfalt og byrjaði að skoða forritunar kóðan.
+17.2.2017 - Byrjaði á flowchartinu og fór aftur yfir samsetninguna á róbót þar sem það voru nokkrir veikleikar.
