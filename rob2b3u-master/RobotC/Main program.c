@@ -42,7 +42,13 @@ task main()
 
 	}while(surround1[14] != 0);
 
-for(int i = 0; i < sizeof(surround1); i++)
+			motor[leftMotor] = 0;
+			motor[rightMotor] = 0;
+			motor[aftMotor] = 0;
+
+			wait1Msec(10000);
+
+for(int i = 0; i < sizeof(surround1)/2; i++)
 	{
 		if(twoVal.min > surround1[i])
 		{
@@ -53,7 +59,7 @@ for(int i = 0; i < sizeof(surround1); i++)
 int min1 = twoVal.min;
 int minNum1 = twoVal.minNum;
 
-for(int i = 0; i < sizeof(surround2); i++)
+for(int i = 0; i < sizeof(surround2)/2; i++)
 	{
 		if(twoVal.min > surround2[i])
 		{
