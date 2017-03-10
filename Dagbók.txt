@@ -6,3 +6,4 @@
 15.2.2017 - Fínpússaði gant ritið þar sem það var einum of einfalt og byrjaði að skoða forritunar kóðan.
 17.2.2017 - Byrjaði á flowchartinu og fór aftur yfir samsetninguna á róbót þar sem það voru nokkrir veikleikar.
 22.2.2017 - 8.3.2017 Eftir mikið vesen tókst mér loksins að klára að setja gant og flæðiritinn inn í lýsingunna.
+10.3.2017 - Eftir mikið struggle þurfti ég að sætta mig við a forsíðu myndinn var ekki alveg í miðjunni, ég hata MikTex.
