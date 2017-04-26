@@ -1,5 +1,5 @@
-#pragma config(Sensor, dgtl2,  leftSonar,      sensorSONAR_cm)
-#pragma config(Sensor, dgtl4,  rightSonar,     sensorSONAR_cm)
+#pragma config(Sensor, dgtl1,  leftSonar,      sensorSONAR_cm)
+#pragma config(Sensor, dgtl3,  rightSonar,     sensorSONAR_cm)
 #pragma config(Motor,  port2,           leftMotor,     tmotorServoContinuousRotation, openLoop)
 #pragma config(Motor,  port3,           rightMotor,    tmotorServoContinuousRotation, openLoop, reversed)
 #pragma config(Motor,  port4,           aftMotor,      tmotorServoContinuousRotation, openLoop)
